@@ -1,3 +1,15 @@
 .reset-list {
   list-style: none;
 }
+.no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+.no-marginpadding {
+  margin: 0;
+  padding: 0;
+}
