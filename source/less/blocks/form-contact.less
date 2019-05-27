@@ -1,0 +1,105 @@
+.form-contact {
+  .no-marginpadding;
+  margin-top: 25px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: @tablet-width) {
+  .form-contact {
+    width: 648px;
+    .no-marginpadding;
+  }
+}
+.form-contact__list {
+  .no-marginpadding;
+  width: 280px;
+  list-style: none;
+}
+@media (min-width: @tablet-width) {
+  .form-contact__list {
+    width: 648px;
+    .no-marginpadding;
+  }
+}
+.form-contact__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-contact__title {
+  .no-marginpadding;
+  font-family: @ptsans;
+  font-weight: 300;
+  color: @textColor;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 280px;
+}
+@media (min-width: @tablet-width) {
+  .form-contact__title {
+    padding-top: 67px;
+    font-size: 21px;
+  }
+}
+.form-contact__label {
+  .no-marginpadding;
+  margin-top: 30px;
+  font-family: @ptsans;
+  font-weight: 300;
+  color: @textColor;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 22px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+@media (min-width: @tablet-width) {
+  .form-contact__label {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+.form-contact__input {
+  .no-marginpadding;
+  margin-top: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  padding: 21px;
+  font-family: @ptsans;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: none;
+  background: rgba(242, 242, 242, 0.5);
+
+  border: none;
+}
+
+.form-contact__input--phone {
+  background-image: url("../img/phone.svg"), url("../img/layerform.svg");
+  background-position: 93%, right;
+  background-repeat: no-repeat;
+}
+.form-contact__input--mail {
+  background-image: url("../img/mail.svg"), url("../img/layerform.svg");
+  background-position: 93%, right;
+  background-repeat: no-repeat;
+}
+@media (min-width: @tablet-width) {
+  .form-contact__input {
+    background-position: 97%, right;
+    margin-top: 5px;
+  }
+}
+::-webkit-contacts-auto-fill-button {
+    opacity: 0;
+}

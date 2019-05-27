@@ -1,0 +1,107 @@
+.form-place {
+  .no-marginpadding;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+  margin-bottom: 115px;
+}
+@media (min-width: @tablet-width) {
+  .form-place {
+    width: 648px;
+    .no-marginpadding;
+  }
+}
+.form-place__list {
+  .no-marginpadding;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: @tablet-width) {
+  .form-place__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 648px;
+    margin-left: 97px;
+    padding-top: 2px;
+  }
+}
+.form-place__option {
+  padding-top: 25px;
+}
+@media (min-width: @tablet-width) {
+  .form-place__option {
+    width: 261px;
+    padding-top: 36px;
+  }
+}
+.form-place__title {
+  .no-marginpadding;
+  font-family: @ptsans;
+  font-weight: 300;
+  color: @textColor;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 245px;
+}
+@media (min-width: @tablet-width) {
+  .form-place__title {
+    padding-top: 53px;
+    width: 277px;
+    font-size: 21px;
+    line-height: 27px;
+  }
+}
+.form-place__label-checkbox {
+  .no-marginpadding;
+  font-family: @ptsans;
+  font-weight: 300;
+  color: @textColor;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: none;
+}
+.form-place__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 1);
+}
+.form-place__label-checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.form-place__label-checkbox::before {
+  content: "";
+  top:12px;
+  width: 56px;
+  height: 56px;
+  margin-right: 21px;
+  vertical-align: top;
+  background-color: rgba(242,242,242,1);
+  border-radius: 10%;
+  cursor: pointer;
+  border: none;
+}
+#bridge:checked ~ .form-place__label-checkbox[for="bridge"]:after,
+#hill:checked ~ .form-place__label-checkbox[for="hill"]:after,
+#park:checked ~ .form-place__label-checkbox[for="park"]:after,
+#red:checked ~ .form-place__label-checkbox[for="red"]:after{
+  content: "";
+  position: absolute;
+  top:20px;
+  left:16px;
+  width: 24px;
+  height: 16px;
+  margin-right: 21px;
+  background-image: url(../img/tick.svg);
+  cursor: pointer;
+}

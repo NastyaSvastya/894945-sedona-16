@@ -1,0 +1,105 @@
+.form-choese {
+  .no-marginpadding;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 29px;
+  margin-top: 25px;
+}
+@media (min-width: @tablet-width) {
+  .form-choese {
+    order: -1;
+    .no-marginpadding;
+  }
+}
+.form-choese__list {
+  .no-marginpadding;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: @tablet-width) {
+  .form-choese__list {
+    justify-content: space-between;
+    margin-top: 36px;
+  }
+}
+.form-choese__title {
+  .no-marginpadding;
+  font-family: @ptsans;
+  font-weight: 300;
+  color: @textColor;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 245px;
+}
+@media (min-width: @tablet-width) {
+  .form-choese__title {
+    text-align: left;
+    font-size: 21px;
+    width: 280px;
+    padding-top: 37px;
+  }
+}
+.form-choese__radio {
+  .no-marginpadding;
+  font-family: @ptsans;
+  font-weight: 300;
+  color: @textColor;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: none;
+}
+.form-choese__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 1);
+}
+.form-choese__radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+@media (min-width: @tablet-width) {
+  .form-choese__radio {
+    margin-top: 21px;
+  }
+}
+.form-choese__radio::before {
+  content: "";
+  top:12px;
+  width: 56px;
+  height: 56px;
+  margin-right: 21px;
+  vertical-align: top;
+  background-color: rgba(242,242,242,0.5);
+  border-radius: 100%;
+  cursor: pointer;
+  border: none;
+}
+#good:checked ~ .form-choese__radio[for="good"]:after,
+#baad:checked ~ .form-choese__radio[for="baad"]:after,
+#dontknow:checked ~ .form-choese__radio[for="dontknow"]:after, {
+content: "";
+position: absolute;
+top:18px;
+left:18px;
+width: 20px;
+height: 20px;
+margin-right: 21px;
+vertical-align: top;
+background-color: rgba(51,51,51,1);
+border-radius: 100%;
+cursor: pointer;
+border: none;
+}
+.form-choese__input {
+  display: none;
+}
